@@ -1,27 +1,40 @@
 #include <stdio.h>
-#define SIZE 10
+#include <stdlib.h>
+#define SIZE 256
 
 int main()
 {
     int s[SIZE];
     int j;
-    int total;
+    int total = 0;
 
-    for (j = 0; j < SIZE; j++) {
-        s[j] = 2 + 2 * j;
+	FILE *arquivo
+
+    for( j = 0 ; j < SIZE ; j++ ) {
+        s[j] = 0;
     }
 
-    for (j = 0; j < SIZE; j++) {
+    // TODO: ler de arquivo!
+    s['A']++;
+    s['B']++;
+    s['A']++;
+
+    //
+
+    for( j = 0 ; j < SIZE ; j++ ) {
         total += s[j];
     }
 
-    printf("%8s%7s\n", "Elemento", "Valor");
+    printf("%8s%13s\n", "Elemento", "Valor");
 
-    for (j = 0; j < SIZE; j++) {
-        printf("%8d %7d\n", j, s[j]);
+    for( j = 0 ; j < SIZE ; j++ ) {
+        if (s[j] != 0)
+            printf("%8d%4c%5x%13d\n", j, j, j, s[j]);
     }
 
-    printf("%8s%7d\n", "Total", total);
+    printf("%8s%13d\n", "Total", total);
 
-    return 0;
+    return EXIT_SUCCESS;
 }
+
+
