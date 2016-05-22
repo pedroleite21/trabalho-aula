@@ -14,17 +14,17 @@ int main (void) {
         
             if (a >= b) {
                 maior = a;
-                printf("Maior = %i", a);
+                printf("Maior = %i\n", a);
                 menor = b; }
             else {
                 maior = b;
-                printf("Maior = %i", b);
+                printf("Maior = %i\n", b);
                 menor = a; }
             menors = menors + menor;
 
     }
     
-    printf("A soma dos menores = %i", menors);
+    printf("A soma dos menores = %i\n", menors);
     fclose(arq);
     
     return 0;
