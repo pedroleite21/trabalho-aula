@@ -20,7 +20,7 @@ int main() {
 	
 	cel = temperatura(f);
 
-	printf("Em ºC = %.1f\n", cel);
+	printf("ºC = %.1f\n", cel);
 
 	return 0;
 }	
