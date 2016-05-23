@@ -2,13 +2,14 @@
 #include <stdlib.h>
 #define SIZE 256
 
-int main()
+int main(int argc, char* argv[])
 {
     int s[SIZE];
     int j;
     int total = 0;
 
-	FILE *arquivo
+	FILE *arquivo;
+	arquivo = fopen(argv[1], "r");
 
     for( j = 0 ; j < SIZE ; j++ ) {
         s[j] = 0;
@@ -17,8 +18,6 @@ int main()
     // TODO: ler de arquivo!
     s['A']++;
     s['B']++;
-    s['A']++;
-
     //
 
     for( j = 0 ; j < SIZE ; j++ ) {
@@ -33,6 +32,8 @@ int main()
     }
 
     printf("%8s%13d\n", "Total", total);
+
+	fclose(arquivo);
 
     return EXIT_SUCCESS;
 }
