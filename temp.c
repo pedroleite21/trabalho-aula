@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+float temperatura (float);
+
 float temperatura (float f) {
 	float c;
 	c = 5.0/9.0 * (f - 32);

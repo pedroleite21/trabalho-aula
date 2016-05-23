@@ -1,5 +1,7 @@
 #include <stdio.h>
 
+void mudarvalor (float*, float*);
+
 void mudarvalor (float *a, float *b) {
 	float aux;
 	aux = *a;

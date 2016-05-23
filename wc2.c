@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-int main() {
+int main(int argc, char* argv[]) {
 
     FILE *arquivo; 
     int c; // variável inteira para receber o arquivo
@@ -8,14 +8,16 @@ int main() {
     int cb = 0; // contador de bytes
     int cp = 0; // contador de palavras
     int iniciop = 0; // demarcar o inicio da palavra
-    char nomearquivo [30]; // char para receber o nome do arquivo pela linha de comando
-    
-    printf("Digite o nome do arquivo: \n"); // conversação com o usuário
+	/*
+	char nomearquivo [30];
+        
+	printf("Digite o nome do arquivo: \n"); // conversação com o usuário
     scanf("%s", nomearquivo); // recebe o nome do arquivo
-    
-    arquivo = fopen(nomearquivo, "r"); // abre o arquivo
+	*/
+    arquivo = fopen(argv[1], "r"); // abre o arquivo
+	
     c = getc(arquivo);
-    while ( c != -1 //enquanto c não acaba) {
+    while ( c != -1 ) {
         cb++; // contando os bytes 
         if (c == '\n')
             cl = cl + 1; // contando as linhas
