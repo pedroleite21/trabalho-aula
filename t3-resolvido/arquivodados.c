@@ -11,7 +11,7 @@ int main (void) {
     arq = fopen (nomearquivo, "r");
     
     while ((fscanf(arq, "%i %i", &a, &b)) != EOF) {
-        
+            printf("%d %d\n", a, b);
             if (a >= b) {
                 maior = a;
                 printf("Maior = %i\n", a);
